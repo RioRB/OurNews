@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Setting Universal */
+* {
+   box-sizing: border-box;
+}
+
+/* Header website */
+header {
+   display: inline;
+}
+
+/* layout logo dan nama website */
+.jumbotron {
+   font-size: 20px;
+   padding: 60px;
+   background-color: #495371;
+   color: white;
+   display: flex;
+   justify-content: center;
+}
+
+/* logo website */
+.logo {
+   display: flex;
+   width: 150px;
+   flex-direction: column;
+   justify-content: center;
+}
+
+/* nama website */
+.web-title {
+   padding: 15px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+}
+
+/* ketentuan pada font di nama website */
+.jumbotron p, h1 {
+   margin: 0;
+}
+
+/* navigation bar */
+nav {
+   background-color: #00a2c6;
+   display: flex;
+}
+
+nav ul {
+   padding: 0;
+}
+
+nav ul li {
+   display: inline;
+   list-style-type: none;
+   margin-right: -5px;
+}
+
+nav ul li a {
+   font-size: 18px;
+   font-weight: 400;
+   text-decoration: none;
+   padding: 16px;
+   color: white;
+   text-align: center;
+}
+
+nav ul li a.active, nav ul li a:hover:not(.active){
+   background-color: #21325E;
+   font-weight: bold;
+}
+
+body {
+   font-family: 'Quicksand', sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+/* konten utama website */
+main {
+   padding: 20px;
+   overflow: auto;
+}
+
+/* layout konten utama */
+#content {
+   float: left;
+   width: 75%;
+   text-align: justify;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* layout artikel suatu berita */
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: 20px;
+   display: flex;
+}
+
+/* layout pada konten biodata */
+.bio-card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* layout gambar berita */
+.featured-image {
+   display: flex;
+   flex-direction: column;
+   width: 40%;
+   max-height: 300px;
+   object-fit: cover;
+   object-position: center;
+}
+
+/* layout isi berita */
+.news-content {
+   display: flex;
+   flex-direction: column;
+   padding: 15px;
+   padding-top: 0px;
+   margin: 0;
+}
+
+.news-content p, h2 {
+   margin-top: 0;
+   margin-bottom: 10px;
+}
+
+.news-content h2 {
+   text-align: left;
+}
+
+.news-content a {
+   text-decoration: none;
+   color: black;
+}
+
+.news-content a:hover {
+   color: red;
+}
+
+.author-date {
+   font-size: 14px;
+   font-weight: lighter;
+   color: darkgray;
+}
+
+/* tombol pada berita */
+.button {
+  border: 2px solid #008CBA;
+  width: 180px;
+  padding: 10px;
+  text-align: left;
+  text-decoration: none;
+  display: inline;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #008CBA;
+  color: white;
+}
+
+/* layout tombol halaman */
+.page {
+   display: inline-block;
+   margin: 10px;
+}
+
+.page a {
+   padding: 10px 15px;
+   float: left;
+   color: black;
+   text-decoration: none;  
+}
+
+.page a.active, .page a:hover:not(.active){
+   background-color: #21325E;
+   color: white;
+}
+
+/* layout penulisan profil biodata */
+.profile h2, h3 {
+    color: #21325E
+}
+
+.profile header {
+   text-align: center;
+}
+
+.profile img {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+}
+
+/* layout konten profil biodata */
+aside {
+   float: right;
+   width: 25%;
+   padding-left: 20px;
+   font-family: 'Montserrat', sans-serif;
+}
+
+/* layout kaki website */
+footer {
+   padding: 20px;
+   color: white;
+   background-color: #00a2c6;
+   text-align: center;
+   font-weight: bold;
+}
+
+/* ketentuan pada ukuran media tertentu */
+@media screen and (max-width: 1000px) {
+   #content,
+   aside {
+       width: 100%;
+       padding: 0;
+   }
+
+   nav {
+      flex-flow: column wrap;
+   }
+
+   .featured-image {
+      width: 100%;
+      margin-bottom: 10px;
+   }
+   .card {
+      flex-flow: column wrap;
+   }
+}
